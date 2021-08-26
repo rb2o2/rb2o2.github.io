@@ -174,22 +174,22 @@
             }
         }
         var color_switch = document.getElementById("path47");
-        var color = 1
+        var color = 1;
         color_switch.onclick = function () {
-          color = 3-color;
-          line_1.setAttribute("class", "fore-" + (3-color))
-          line_2.setAttribute("class", "fore-" + (3-color))
-          line_3.setAttribute("class", "fore-" + (3-color))
-          line_4.setAttribute("class", "fore-" + (3-color))
-          line_5.setAttribute("class", "fore-" + (3-color))
-          line_6.setAttribute("class", "fore-" + (3-color))
-          line_7.setAttribute("class", "fore-" + (3-color))
-          line_8.setAttribute("class", "fore-" + (3-color))
-          document.getElementById("rect31").setAttribute("class", "back-" + (3-color))
-          document.getElementById("rect42").setAttribute("class", "fore-" + (3-color))
-          document.getElementById("path66").setAttribute("class", "fore-" + (3-color))
-          document.getElementById("path47").setAttribute("class", "fore-" + (3-color))
-          document.getElementById("text6970").setAttribute("class", "fore-" + (3-color))
+          color = (color)%2 + 1;
+          line_1.setAttribute("class", "fore-" + color);
+          line_2.setAttribute("class", "fore-" + color);
+          line_3.setAttribute("class", "fore-" + color);
+          line_4.setAttribute("class", "fore-" + color);
+          line_5.setAttribute("class", "fore-" + color);
+          line_6.setAttribute("class", "fore-" + color);
+          line_7.setAttribute("class", "fore-" + color);
+          line_8.setAttribute("class", "fore-" + color);
+          document.getElementById("rect31").setAttribute("class", "back-" + color);
+          document.getElementById("rect42").setAttribute("class", "fore-" + color);
+          document.getElementById("path66").setAttribute("class", "fore-" + color);
+          document.getElementById("path47").setAttribute("class", "fore-" + color);
+          document.getElementById("text6970").setAttribute("class", "fore-" + color);
         }
      }
   </script>
