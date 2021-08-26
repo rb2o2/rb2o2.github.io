@@ -12,6 +12,20 @@
    id="svg5"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+    .fore-1 {
+      fill: #ffffff;
+    }
+    .back-1 {
+      fill: #0000ff;
+    }
+    .fore-2 {
+      fill: #00ff00;
+    }
+    .back-2 {
+      fill: #000000;
+    }
+  </style>
   <defs
      id="defs2">
     <rect
@@ -23,64 +37,64 @@
   </defs>
   <g
      id="layer1">
-    <rect
-       style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.264583"
+    <rect class="back-1"
+       style="fill-rule:evenodd;stroke-width:0.264583"
        id="rect31"
        width="508"
        height="285.75"
        x="0"
        y="0" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect201"
        width="508"
        height="2.1418266"
        x="0"
        y="20.704327" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect203"
        width="508"
        height="8.5673065"
        x="0"
        y="64.96875" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect205"
        width="508"
        height="1.0709076"
        x="0"
        y="129.22356" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect207"
        width="508"
        height="5.7115326"
        x="0"
        y="161.35095" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect209"
        width="508"
        height="3.212738"
        x="0"
        y="138.14783" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect211"
        width="508"
        height="2.4987946"
        x="0"
        y="81.38942" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect213"
        width="508"
        height="0.63460284"
        x="0"
        y="199.18991" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.264583"
+    <rect class="fore-1"
+       style="stroke-width:0.264583"
        id="rect213-4"
        width="508"
        height="9.9890461"
@@ -107,7 +121,7 @@
         var line_8 = document.getElementById(&quot;rect201&quot;);
         var y0_8 = line_8.getAttribute(&quot;y&quot;);
         var t = 0;
-        setInterval(function() {
+        var wander = function() {
         line_1.setAttribute(&quot;y&quot;,
             &quot;&quot; + (parseFloat(y0_1) + 0.23 * (t % 34)));
         line_2.setAttribute(&quot;y&quot;,
@@ -124,18 +138,99 @@
             &quot;&quot; + (parseFloat(y0_7) - 0.61 * (t % 61)));
         line_8.setAttribute(&quot;y&quot;,
             &quot;&quot; + (parseFloat(y0_8) + 0.287 * (t % 71)));
-        t++;}, 30);
-        setInterval(function() {}, 50)
+        t++;
+         };
+        var inter_1 = setInterval(wander, 30);
+        var power_button = document.getElementById("g4296");
+        var power = true;
+        power_button.onclick = function () {
+            if (power) {
+               power = false;
+               clearInterval(inter_1)
+               var y1_1 = line_1.getAttribute("y");
+               var y1_2 = line_2.getAttribute("y");
+               var y1_3 = line_3.getAttribute("y");
+               var y1_4 = line_4.getAttribute("y");
+               var y1_5 = line_5.getAttribute("y");
+               var y1_6 = line_6.getAttribute("y");
+               var y1_7 = line_7.getAttribute("y");
+               var y1_8 = line_8.getAttribute("y");
+               var t1 = t;
+               var mv1 = function () {
+                  if ((t - t1) &lt;= 30) {
+                     line_1.setAttribute("y", "" + (parseFloat(y1_1) - (-135 + parseFloat(y1_1))* (t - t1)/30.0));
+                     line_2.setAttribute("y", "" + (parseFloat(y1_2) - (-135 + parseFloat(y1_2))* (t - t1)/30.0));
+                     line_3.setAttribute("y", "" + (parseFloat(y1_3) - (-135 + parseFloat(y1_3))* (t - t1)/30.0));
+                     line_4.setAttribute("y", "" + (parseFloat(y1_4) - (-135 + parseFloat(y1_4))* (t - t1)/30.0));
+                     line_5.setAttribute("y", "" + (parseFloat(y1_5) - (-135 + parseFloat(y1_5))* (t - t1)/30.0));
+                     line_6.setAttribute("y", "" + (parseFloat(y1_6) - (-135 + parseFloat(y1_6))* (t - t1)/30.0));
+                     line_7.setAttribute("y", "" + (parseFloat(y1_7) - (-135 + parseFloat(y1_7))* (t - t1)/30.0));
+                     line_8.setAttribute("y", "" + (parseFloat(y1_8) - (-135 + parseFloat(y1_8))* (t - t1)/30.0));
+                     t++;
+                     setTimeout(mv1, 30)
+                  }
+               }
+               setTimeout(mv1, 30)
+            }
+        }
+        var color_switch = document.getElementById("path47");
+        var color = 1
+        color_switch.onclick = function () {
+          color = 3-color;
+          line_1.setAttribute("class", "fore-" + (3-color))
+          line_2.setAttribute("class", "fore-" + (3-color))
+          line_3.setAttribute("class", "fore-" + (3-color))
+          line_4.setAttribute("class", "fore-" + (3-color))
+          line_5.setAttribute("class", "fore-" + (3-color))
+          line_6.setAttribute("class", "fore-" + (3-color))
+          line_7.setAttribute("class", "fore-" + (3-color))
+          line_8.setAttribute("class", "fore-" + (3-color))
+          document.getElementById("rect31").setAttribute("class", "back-" + (3-color))
+          document.getElementById("rect42").setAttribute("class", "fore-" + (3-color))
+          document.getElementById("path66").setAttribute("class", "fore-" + (3-color))
+          document.getElementById("path47").setAttribute("class", "fore-" + (3-color))
+          document.getElementById("text6970").setAttribute("class", "fore-" + (3-color))
+        }
      }
   </script>
   <text
      xml:space="preserve"
-     transform="scale(0.26458333)"
-     id="text6970"
-     style="font-style:normal;font-weight:normal;font-size:74.66666614px;line-height:1.25;font-family:'Noto Mono';white-space:pre;shape-inside:url(#rect6972);fill:#ffffff;fill-opacity:1;stroke:none;-inkscape-font-specification:'Noto Mono';font-stretch:normal;font-variant:normal"><tspan
+     transform="matrix(0.26458333,0,0,0.26458333,-56.229964,-1.9845869)"
+     id="text6970" class="fore-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.6667px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';white-space:pre;shape-inside:url(#rect6972);fill-opacity:1;stroke:none"><tspan
        x="335.91211"
-       y="469.77061"
-       id="tspan23853">PANGAIA</tspan></text>
+       y="469.77065"
+       id="tspan4320">PANGAIA</tspan></text>
+  <g
+     id="g4296">
+    <g
+       id="g4020">
+      <rect class="fore-1"
+         style="stroke-width:0.149941"
+         id="rect42"
+         width="2.0150471"
+         height="7.0292292"
+         x="10.329948"
+         y="4.2850418"
+         ry="0.56233823" />
+      <path
+         id="path66" class="fore-1"
+         style="color:#000000;stroke-width:0.149941;-inkscape-stroke:none"
+         d="m 13.56277,7.050695 c 1.492207,0.7964053 2.507712,2.3687992 2.507666,4.178368 -1.2e-4,2.613919 -2.11917,4.732844 -4.73309,4.732801 C 8.7235363,15.96175 6.6046563,13.842871 6.6045363,11.229063 6.6045016,9.5017323 7.5298028,7.9905011 8.9117821,7.1640259 9.7956979,6.5640334 10.329508,6.5874567 9.9062535,5.6719488 9.4829989,4.7564409 8.8403304,5.2047669 8.1086736,5.6244497 6.1730871,6.7419743 4.8704963,8.8334111 4.8705663,11.229063 c 1.044e-4,3.571483 2.8953,6.466727 6.4667797,6.466786 3.57159,9.9e-5 6.466981,-2.895192 6.46707,-6.466786 C 17.804479,8.7243737 16.38063,6.5522545 14.298177,5.4780039 13.602852,5.0978041 13.038272,4.8267137 12.706516,5.7284922 12.374759,6.6302707 12.895095,6.6160088 13.56277,7.050695 Z" />
+    </g>
+    <rect
+       style="fill:none;stroke-width:0.275531"
+       id="rect4192"
+       width="12.933888"
+       height="13.410807"
+       x="4.8705277"
+       y="4.2850418" />
+  </g>
+  <path
+      id="path47" class="fore-1"
+      style="stroke-width:0.999999"
+      d="M 107.38086 17.080078 A 24.441996 25.343259 0 0 0 82.939453 42.421875 A 24.441996 25.343259 0 0 0 107.38086 67.765625 A 24.441996 25.343259 0 0 0 127.80859 56.330078 L 122.5293 52.537109 A 17.812162 18.93442 0 0 1 107.40234 61.585938 A 17.812162 18.93442 0 0 1 89.591797 42.652344 A 17.812162 18.93442 0 0 1 107.40234 23.716797 A 17.812162 18.93442 0 0 1 121.2832 30.789062 L 126.37305 26.548828 A 24.441996 25.343259 0 0 0 107.38086 17.080078 z "
+      transform="scale(0.26458333)" />
 </svg>
 </body>
 </html>
