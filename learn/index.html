@@ -1238,7 +1238,7 @@ body {
 <hr>
 <div class="markdown-heading"><h3 class="heading-element">Подсказки</h3><a id="user-content-подсказки" class="anchor" aria-label="Permalink: Подсказки" href="#подсказки"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <ul>
-<li>Вывод на консоль осуществляется методом <code>System.out.println(&lt;строка&gt;)</code> (print line) или <code>System.out.print(&lt;строка&gt;)</code>
+<li>Вывод на консоль осуществляется методом <code>System.out.println(&lt;строка&gt;)</code> (print line, добавляет в конце перенос на новую строку) или <code>System.out.print(&lt;строка&gt;)</code>
 </li>
 <li>Чтение с консоли можно сделать через метод <code>java.util.Scanner.next()</code>
 </li>
@@ -1246,7 +1246,9 @@ body {
 <ul>
 <li>на русском, устаревшая версия jdk 7: <a href="https://spec-zone.ru/RU/Java/Docs/7/api/overview-summary.html" rel="nofollow">https://spec-zone.ru/RU/Java/Docs/7/api/overview-summary.html</a>
 </li>
-<li>новейший долгосрочный выпуск jdk 21: <a href="https://docs.oracle.com/en/java/javase/21/docs/api/index.html" rel="nofollow">https://docs.oracle.com/en/java/javase/21/docs/api/index.html</a>
+<li>новейший долгосрочный выпуск jdk 21 (на английском): <a href="https://docs.oracle.com/en/java/javase/21/docs/api/index.html" rel="nofollow">https://docs.oracle.com/en/java/javase/21/docs/api/index.html</a>
+</li>
+<li>экспресс-курс по Java для начинающих: <a href="https://developer.alexanderklimov.ru/android/java/java.php" rel="nofollow">https://developer.alexanderklimov.ru/android/java/java.php</a>
 </li>
 <li>помни, документация - твой лучший друг!</li>
 </ul>
@@ -1259,7 +1261,7 @@ body {
 <p>Создать файл name.txt с именем пользователя, и считать имя оттуда</p>
 <hr>
 <div class="markdown-heading"><h3 class="heading-element">Подсказка</h3><a id="user-content-подсказка" class="anchor" aria-label="Permalink: Подсказка" href="#подсказка"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
-<p>Можно использовать конструктор <code>new Scanner(File f)</code></p>
+<p>Можно использовать конструктор сканера <code>new Scanner(File f)</code> и конструктор объекта файла <code>new File(String путьКФайлу)</code></p>
 <hr>
 <div class="markdown-heading"><h1 class="heading-element">Задание №3</h1><a id="user-content-задание-3" class="anchor" aria-label="Permalink: Задание №3" href="#задание-3"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>Модифицировать программу из задания 1 следующим образом<br>
@@ -1279,16 +1281,44 @@ Manager 11-12
 <hr>
 <div class="markdown-heading"><h3 class="heading-element">Подсказки</h3><a id="user-content-подсказки-1" class="anchor" aria-label="Permalink: Подсказки" href="#подсказки-1"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>Нужно узнать текущую дату, и дату дня рождения пользователя.
-Также пригодится нахождение подстроки
-<code>"26-08".substring(0, 2)</code> - возвращает подстроку с 0 по 2(не включительно) символ, то есть "26"
-<code>"04-11".substring(3)</code> - возвращает подстроку начиная с 3 символа, то есть "11"
-Приведение любого объекта к строковому представлению: <code>x.toString()</code></p>
+Также пригодится нахождение подстроки :</p>
+<ul>
+<li>
+<p><code>"26-08".substring(0, 2)</code> - возвращает подстроку с 0 по 2 символ (не включительно), то есть "26"</p>
+</li>
+<li>
+<p><code>"04-11".substring(3)</code> - возвращает подстроку начиная с 3 символа до конца строки, то есть "11" <br>Все индексы начинаются с 0</p>
+</li>
+<li>
+<p>Приведение любого объекта к строковому представлению: <code>x.toString()</code></p>
+</li>
+<li>
 <p>Сегодняшний день можно получить так</p>
-<pre><code>    Calendar calendar = new GregorianCalendar();
-    var месяц = calendar.get(Calendar.MONTH) + 1;
-    var деньМесяца = calendar.get(Calendar.DAY_OF_MONTH);
+<ul>
+<li>
+<pre><code>  Calendar calendar = new GregorianCalendar();
+  var месяц = calendar.get(Calendar.MONTH) + 1;
+  var деньМесяца = calendar.get(Calendar.DAY_OF_MONTH); 
 </code></pre>
-<hr>
-<p><code>Scanner</code> может читать целые строки, может читать отдельные слова, разделенные пробелами
-Scanner.next</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Scanner</code> может читать целые строки, может читать отдельные слова, разделенные пробелами. <br>scanner.next() - читает следующее слово</p>
+</li>
+<li>
+<p>сравнение строк:</p>
+<ul>
+<li>"строка1".equals("другая строка") // &lt;- false</li>
+<li>"строка".equals("строка") // &lt;- true</li>
+</ul>
+</li>
+<li>
+<p>преобразование строки с цифрами к целому типу:</p>
+<ul>
+<li>строка "42" и число 42 не равны</li>
+<li>Integer.parseInt("42") == 42 // &lt;- true</li>
+</ul>
+</li>
+</ul>
 </article></body></html>
