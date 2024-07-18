@@ -1222,13 +1222,14 @@ body {
 .markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
   color: var(--color-danger-fg);
 }
-</style><title>задание1</title></head><body><article class="markdown-body"><div class="markdown-heading"><h1 class="heading-element">Задание #1</h1><a id="user-content-задание-1" class="anchor" aria-label="Permalink: Задание #1" href="#задание-1"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+</style><title>задание1</title></head><body><article class="markdown-body"><div class="markdown-heading"><h1 class="heading-element">Задачки для изучающих Java с нуля</h1><a id="user-content-задачки-для-изучающих-java-с-нуля" class="anchor" aria-label="Permalink: Задачки для изучающих Java с нуля" href="#задачки-для-изучающих-java-с-нуля"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h2 class="heading-element">Задание №1</h2><a id="user-content-задание-1" class="anchor" aria-label="Permalink: Задание №1" href="#задание-1"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>Написать программу, которая будет выводить приветствие, спрашивать 
 пользователя его имя, и выводить еще одно, персонализированное 
 приветствие.</p>
 <hr>
 <p>Программа должна состоять из одного исполняемого (т.е. с методом <code>main</code>) класса <code>Greeting</code> в пакете <code>io.github.pangaia.learn</code>.
-Текст первого приветствия выводится на консоль (<code>System.out</code>), затем выводится приглашение пользователю ввести свое имя, имя пользователя считывается с потока ввода (<code>System.in</code>), затем вместе с персонализированным приветствием выводится на консоль. После этого исполнение программы завершается.</p>
+Текст первого приветствия выводится на консоль (стандартный поток вывода <code>System.out</code>), затем выводится приглашение пользователю ввести свое имя, имя пользователя считывается с консоли (стандартный поток ввода <code>System.in</code>), затем вместе с персонализированным приветствием выводится на консоль. После этого исполнение программы завершается.</p>
 <hr>
 <div class="markdown-heading"><h3 class="heading-element">Пример ввода-вывода</h3><a id="user-content-пример-ввода-вывода" class="anchor" aria-label="Permalink: Пример ввода-вывода" href="#пример-ввода-вывода"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <pre><code> Привет, как тебя зовут?
@@ -1240,7 +1241,7 @@ body {
 <ul>
 <li>Вывод на консоль осуществляется методом <code>System.out.println(&lt;строка&gt;)</code> (print line, добавляет в конце перенос на новую строку) или <code>System.out.print(&lt;строка&gt;)</code>
 </li>
-<li>Чтение с консоли можно сделать через метод <code>java.util.Scanner.next()</code>
+<li>Чтение с консоли можно сделать через метод <code>java.util.Scanner.next()</code>, в этом случае нужно создать сканер из потока ввода: <code>new Scanner(System.in)</code>
 </li>
 <li>документация:
 <ul>
@@ -1255,15 +1256,16 @@ body {
 </li>
 </ul>
 <hr>
-<div class="markdown-heading"><h1 class="heading-element">Задание №2</h1><a id="user-content-задание-2" class="anchor" aria-label="Permalink: Задание №2" href="#задание-2"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h2 class="heading-element">Задание №2</h2><a id="user-content-задание-2" class="anchor" aria-label="Permalink: Задание №2" href="#задание-2"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>Дополнить программу из первого задания, чтобы ввод имени пользователя осуществлялся из файла</p>
 <hr>
-<p>Создать файл name.txt с именем пользователя, и считать имя оттуда</p>
+<p>Создать файл <code>name.txt</code> с именем пользователя, и считать имя оттуда</p>
 <hr>
 <div class="markdown-heading"><h3 class="heading-element">Подсказка</h3><a id="user-content-подсказка" class="anchor" aria-label="Permalink: Подсказка" href="#подсказка"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>Можно использовать конструктор сканера <code>new Scanner(File f)</code> и конструктор объекта файла <code>new File(String путьКФайлу)</code></p>
 <hr>
-<div class="markdown-heading"><h1 class="heading-element">Задание №3</h1><a id="user-content-задание-3" class="anchor" aria-label="Permalink: Задание №3" href="#задание-3"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h2 class="heading-element">Задание №3</h2><a id="user-content-задание-3" class="anchor" aria-label="Permalink: Задание №3" href="#задание-3"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>* <em>Это задание посложнее предыдущих</em></p>
 <p>Модифицировать программу из задания 1 следующим образом<br>
 Дан файл <code>днирождения.txt</code> При вводе пользователем воего 
 имени, программа сверяется со списком из файла, и, если там есть запись о
@@ -1304,20 +1306,20 @@ Manager 11-12
 </ul>
 </li>
 <li>
-<p><code>Scanner</code> может читать целые строки, может читать отдельные слова, разделенные пробелами. <br>scanner.next() - читает следующее слово</p>
+<p><code>Scanner</code> может читать целые строки, может читать отдельные слова, разделенные пробелами. <br><code>scanner.next()</code> - читает следующее слово</p>
 </li>
 <li>
 <p>сравнение строк:</p>
 <ul>
-<li>"строка1".equals("другая строка") // &lt;- false</li>
-<li>"строка".equals("строка") // &lt;- true</li>
+<li><code>"строка1".equals("другая строка") // &lt;- false</code></li>
+<li><code>"строка".equals("строка") // &lt;- true</code></li>
 </ul>
 </li>
 <li>
 <p>преобразование строки с цифрами к целому типу:</p>
 <ul>
 <li>строка "42" и число 42 не равны</li>
-<li>Integer.parseInt("42") == 42 // &lt;- true</li>
+<li><code>Integer.parseInt("42") == 42 // &lt;- true</code></li>
 </ul>
 </li>
 </ul>
