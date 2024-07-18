@@ -1298,8 +1298,8 @@ Manager 11-12
 <p>Сегодняшний день можно получить так</p>
 <ul>
 <li>
-<pre><code>  Calendar calendar = new GregorianCalendar();
-  var месяц = calendar.get(Calendar.MONTH) + 1;
+<pre><code>  Calendar calendar = new GregorianCalendar(); // Григорианский календарь
+  var месяц = calendar.get(Calendar.MONTH) + 1; // В Calendar месяцы начинаются с 0
   var деньМесяца = calendar.get(Calendar.DAY_OF_MONTH); 
 </code></pre>
 </li>
