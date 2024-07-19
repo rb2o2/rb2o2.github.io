@@ -5,6 +5,7 @@
   <title>PANGAIA</title>
 </head>
 <body>
+
 <svg width="100%"
      height="100%"
      viewBox="0 0 507.99998 285.75"
@@ -15,12 +16,22 @@
   <style>
     .fore-1 {
       fill: #ffffff;
+      stroke: #ffffff;
+    }
+    .fore-1 path {
+      stroke: #ffffff;
+      fill: #0000ff;
     }
     .back-1 {
       fill: #0000ff;
     }
     .fore-2 {
       fill: #00ff00;
+      stroke: #00ff00;
+    }
+    .fore-2 path {
+      stroke: #00ff00;
+      fill: #000000;
     }
     .back-2 {
       fill: #000000;
@@ -33,6 +44,134 @@
           height="86.629834"
           id="rect6972" />
   </defs>
+  <script>
+    window.onload = function () {
+      var line_1 = document.getElementById("rect213-4");
+      var y0_1 = line_1.getAttribute("y");
+      var line_2 = document.getElementById("rect213");
+      var y0_2 = line_2.getAttribute("y");
+      var line_3 = document.getElementById("rect211");
+      var y0_3 = line_3.getAttribute("y");
+      var line_4 = document.getElementById("rect209");
+      var y0_4 = line_4.getAttribute("y");
+      var line_5 = document.getElementById("rect207");
+      var y0_5 = line_5.getAttribute("y");
+      var line_6 = document.getElementById("rect205");
+      var y0_6 = line_6.getAttribute("y");
+      var line_7 = document.getElementById("rect203");
+      var y0_7 = line_7.getAttribute("y");
+      var line_8 = document.getElementById("rect201");
+      var y0_8 = line_8.getAttribute("y");
+      var t = 0;
+      var wander = function() {
+        line_1.setAttribute("y",
+                "" + (parseFloat(y0_1) + 0.23 * (t % 34)));
+        line_2.setAttribute("y",
+                "" + (parseFloat(y0_2) - 0.134 * (t % 51)));
+        line_3.setAttribute("y",
+                "" + (parseFloat(y0_3) - 0.541 * (t % 41)));
+        line_4.setAttribute("y",
+                "" + (parseFloat(y0_4) + 0.71 * (t % 57)));
+        line_5.setAttribute("y",
+                "" + (parseFloat(y0_5) + 0.215 * (t % 31)));
+        line_6.setAttribute("y",
+                "" + (parseFloat(y0_6) + 0.45 * (t % 73)));
+        line_7.setAttribute("y",
+                "" + (parseFloat(y0_7) - 0.61 * (t % 61)));
+        line_8.setAttribute("y",
+                "" + (parseFloat(y0_8) + 0.287 * (t % 71)));
+        t++;
+      };
+      var inter_1 = setInterval(wander, 30);
+      var power_button = document.getElementById("g4296");
+      var power = true;
+      power_button.onclick = function () {
+        if (power) {
+          power = false;
+          clearInterval(inter_1);
+          var y1_1 = line_1.getAttribute("y");
+          var y1_2 = line_2.getAttribute("y");
+          var y1_3 = line_3.getAttribute("y");
+          var y1_4 = line_4.getAttribute("y");
+          var y1_5 = line_5.getAttribute("y");
+          var y1_6 = line_6.getAttribute("y");
+          var y1_7 = line_7.getAttribute("y");
+          var y1_8 = line_8.getAttribute("y");
+          var t1 = t;
+          var t2 = 0;
+          var collapse = function () {
+            if ((t-t2) <= 40) {
+              line_1.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_1.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              line_2.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_2.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              line_3.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_3.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              line_4.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_4.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              line_5.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_5.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              line_6.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_6.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              line_7.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_7.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              line_8.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_8.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
+              t++;
+              setTimeout(collapse, 20)
+            } else {
+              line_1.setAttribute("display","none");
+              line_2.setAttribute("display","none");
+              line_3.setAttribute("display","none");
+              line_4.setAttribute("display","none");
+              line_5.setAttribute("display","none");
+              line_6.setAttribute("display","none");
+              line_7.setAttribute("display","none");
+              line_8.setAttribute("display","none");
+              document.getElementById("text6970").setAttribute("display","none");
+            }
+          };
+          var mv1 = function () {
+            if ((t - t1) <= 30) {
+              line_1.setAttribute("y", "" + (parseFloat(y1_1) - (-135 + parseFloat(y1_1))* (t - t1)/30.0));
+              line_2.setAttribute("y", "" + (parseFloat(y1_2) - (-135 + parseFloat(y1_2))* (t - t1)/30.0));
+              line_3.setAttribute("y", "" + (parseFloat(y1_3) - (-135 + parseFloat(y1_3))* (t - t1)/30.0));
+              line_4.setAttribute("y", "" + (parseFloat(y1_4) - (-135 + parseFloat(y1_4))* (t - t1)/30.0));
+              line_5.setAttribute("y", "" + (parseFloat(y1_5) - (-135 + parseFloat(y1_5))* (t - t1)/30.0));
+              line_6.setAttribute("y", "" + (parseFloat(y1_6) - (-135 + parseFloat(y1_6))* (t - t1)/30.0));
+              line_7.setAttribute("y", "" + (parseFloat(y1_7) - (-135 + parseFloat(y1_7))* (t - t1)/30.0));
+              line_8.setAttribute("y", "" + (parseFloat(y1_8) - (-135 + parseFloat(y1_8))* (t - t1)/30.0));
+              t++;
+              setTimeout(mv1, 30)
+            }
+            else {
+              t2 = t;
+              setTimeout(collapse, 30)
+            }
+          };
+          setTimeout(mv1, 30)
+        } else {
+          power = true;
+          location.reload();
+        }
+      };
+      var color_switch = document.getElementById("path47");
+      var color = 1;
+      color_switch.onclick = function () {
+        color = (color)%2 + 1;
+        line_1.setAttribute("class", "fore-" + color);
+        line_2.setAttribute("class", "fore-" + color);
+        line_3.setAttribute("class", "fore-" + color);
+        line_4.setAttribute("class", "fore-" + color);
+        line_5.setAttribute("class", "fore-" + color);
+        line_6.setAttribute("class", "fore-" + color);
+        line_7.setAttribute("class", "fore-" + color);
+        line_8.setAttribute("class", "fore-" + color);
+        document.getElementById("rect31").setAttribute("class", "back-" + color);
+        document.getElementById("path47").setAttribute("class", "fore-" + color);
+        document.getElementById("g4296").setAttribute("class", "fore-" + color);
+        document.getElementById("j1").setAttribute("class", "fore-" + color);
+        document.getElementById("j2").setAttribute("class", "fore-" + color);
+        document.getElementById("j3").setAttribute("class", "fore-" + color);
+        document.getElementById("j4").setAttribute("class", "fore-" + color);
+        document.getElementById("j5").setAttribute("class", "fore-" + color);
+        document.getElementById("text6970").setAttribute("class", "fore-" + color);
+        document.getElementById("text998").setAttribute("class", "fore-" + color);        
+      }
+    }
+  </script>
   <g id="layer1">
     <rect class="back-1"
           style="fill-rule:evenodd;stroke-width:0.264583"
@@ -98,135 +237,21 @@
           x="0"
           y="246.26556" />
   </g>
-  <script id="script13">
-    window.onload = function () {
-      var line_1 = document.getElementById("rect213-4");
-      var y0_1 = line_1.getAttribute("y");
-      var line_2 = document.getElementById("rect213");
-      var y0_2 = line_2.getAttribute("y");
-      var line_3 = document.getElementById("rect211");
-      var y0_3 = line_3.getAttribute("y");
-      var line_4 = document.getElementById("rect209");
-      var y0_4 = line_4.getAttribute("y");
-      var line_5 = document.getElementById("rect207");
-      var y0_5 = line_5.getAttribute("y");
-      var line_6 = document.getElementById("rect205");
-      var y0_6 = line_6.getAttribute("y");
-      var line_7 = document.getElementById("rect203");
-      var y0_7 = line_7.getAttribute("y");
-      var line_8 = document.getElementById("rect201");
-      var y0_8 = line_8.getAttribute("y");
-      var t = 0;
-      var wander = function() {
-        line_1.setAttribute("y",
-                "" + (parseFloat(y0_1) + 0.23 * (t % 34)));
-        line_2.setAttribute("y",
-                "" + (parseFloat(y0_2) - 0.134 * (t % 51)));
-        line_3.setAttribute("y",
-                "" + (parseFloat(y0_3) - 0.541 * (t % 41)));
-        line_4.setAttribute("y",
-                "" + (parseFloat(y0_4) + 0.71 * (t % 57)));
-        line_5.setAttribute("y",
-                "" + (parseFloat(y0_5) + 0.215 * (t % 31)));
-        line_6.setAttribute("y",
-                "" + (parseFloat(y0_6) + 0.45 * (t % 73)));
-        line_7.setAttribute("y",
-                "" + (parseFloat(y0_7) - 0.61 * (t % 61)));
-        line_8.setAttribute("y",
-                "" + (parseFloat(y0_8) + 0.287 * (t % 71)));
-        t++;
-      };
-      var inter_1 = setInterval(wander, 30);
-      var power_button = document.getElementById("g4296");
-      var power = true;
-      power_button.onclick = function () {
-        if (power) {
-          power = false;
-          clearInterval(inter_1);
-          var y1_1 = line_1.getAttribute("y");
-          var y1_2 = line_2.getAttribute("y");
-          var y1_3 = line_3.getAttribute("y");
-          var y1_4 = line_4.getAttribute("y");
-          var y1_5 = line_5.getAttribute("y");
-          var y1_6 = line_6.getAttribute("y");
-          var y1_7 = line_7.getAttribute("y");
-          var y1_8 = line_8.getAttribute("y");
-          var t1 = t;
-          var t2 = 0;
-          var collapse = function () {
-            if ((t-t2) &lt;= 40) {
-              line_1.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_1.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              line_2.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_2.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              line_3.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_3.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              line_4.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_4.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              line_5.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_5.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              line_6.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_6.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              line_7.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_7.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              line_8.setAttribute("x", "" + 254 * (t - t2) / 40.0); line_8.setAttribute("width", "" + 508*(1-(t-t2)/40.0));
-              t++;
-              setTimeout(collapse, 20)
-            } else {
-              line_1.setAttribute("display","none");
-              line_2.setAttribute("display","none");
-              line_3.setAttribute("display","none");
-              line_4.setAttribute("display","none");
-              line_5.setAttribute("display","none");
-              line_6.setAttribute("display","none");
-              line_7.setAttribute("display","none");
-              line_8.setAttribute("display","none");
-              document.getElementById("text6970").setAttribute("display","none");
-            }
-          };
-          var mv1 = function () {
-            if ((t - t1) &lt;= 30) {
-              line_1.setAttribute("y", "" + (parseFloat(y1_1) - (-135 + parseFloat(y1_1))* (t - t1)/30.0));
-              line_2.setAttribute("y", "" + (parseFloat(y1_2) - (-135 + parseFloat(y1_2))* (t - t1)/30.0));
-              line_3.setAttribute("y", "" + (parseFloat(y1_3) - (-135 + parseFloat(y1_3))* (t - t1)/30.0));
-              line_4.setAttribute("y", "" + (parseFloat(y1_4) - (-135 + parseFloat(y1_4))* (t - t1)/30.0));
-              line_5.setAttribute("y", "" + (parseFloat(y1_5) - (-135 + parseFloat(y1_5))* (t - t1)/30.0));
-              line_6.setAttribute("y", "" + (parseFloat(y1_6) - (-135 + parseFloat(y1_6))* (t - t1)/30.0));
-              line_7.setAttribute("y", "" + (parseFloat(y1_7) - (-135 + parseFloat(y1_7))* (t - t1)/30.0));
-              line_8.setAttribute("y", "" + (parseFloat(y1_8) - (-135 + parseFloat(y1_8))* (t - t1)/30.0));
-              t++;
-              setTimeout(mv1, 30)
-            }
-            else {
-              t2 = t;
-              setTimeout(collapse, 30)
-            }
-          };
-          setTimeout(mv1, 30)
-        } else {
-          power = true;
-          location.reload();
-        }
-      };
-      var color_switch = document.getElementById("path47");
-      var color = 1;
-      color_switch.onclick = function () {
-        color = (color)%2 + 1;
-        line_1.setAttribute("class", "fore-" + color);
-        line_2.setAttribute("class", "fore-" + color);
-        line_3.setAttribute("class", "fore-" + color);
-        line_4.setAttribute("class", "fore-" + color);
-        line_5.setAttribute("class", "fore-" + color);
-        line_6.setAttribute("class", "fore-" + color);
-        line_7.setAttribute("class", "fore-" + color);
-        line_8.setAttribute("class", "fore-" + color);
-        document.getElementById("rect31").setAttribute("class", "back-" + color);
-        document.getElementById("rect42").setAttribute("class", "fore-" + color);
-        document.getElementById("path66").setAttribute("class", "fore-" + color);
-        document.getElementById("path47").setAttribute("class", "fore-" + color);
-        document.getElementById("text6970").setAttribute("class", "fore-" + color);
-        document.getElementById("text998").setAttribute("class", "fore-" + color);        
-      }
-    }
-  </script>
-  <text xml:space="preserve"
-        
-        id="text998" class="fore-1"
-        style="font-family: Helvetica, Arial, sans-serif;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.25;-inkscape-font-specification:'Noto Mono';white-space:pre;shape-inside:url(#rect6972);fill-opacity:1;stroke:none">
-        <tspan x="38.0" y="17.5" id="tspan998"><a href="learn">L</a></tspan></text>
+  <g id="path47" class="fore-1" transform="matrix(0.75 0 0 0.75 18 0)">
+    <path d="M17.5798 9.71016C17.0765 9.57314 16.5468 9.5 16 9.5C13.4668 9.5 11.3002 11.0699 10.4202 13.2898M17.5798 9.71016C20.1271 10.4036 22 12.7331 22 15.5C22 18.8137 19.3137 21.5 16 21.5C14.4633 21.5 13.0615 20.9223 12 19.9722M17.5798 9.71016C17.851 9.02618 18 8.2805 18 7.5C18 4.18629 15.3137 1.5 12 1.5C8.68629 1.5 6 4.18629 6 7.5C6 8.2805 6.14903 9.02618 6.42018 9.71016M10.4202 13.2898C10.149 13.9738 10 14.7195 10 15.5C10 17.277 10.7725 18.8736 12 19.9722M10.4202 13.2898C8.59146 12.792 7.11029 11.451 6.42018 9.71016M6.42018 9.71016C3.87294 10.4036 2 12.7331 2 15.5C2 18.8137 4.68629 21.5 8 21.5C9.53671 21.5 10.9385 20.9223 12 19.9722" fill="none" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+  <a href="learn">
+  <g id="text998" class="fore-1" transform="matrix(0.75 0 0 0.75 38 0)">
+    <path id="j4" d="M17.5582 2C16.8173 2.12346 15.4246 2.81481 15.7802 4.59259C16.1358 6.37037 15.6322 7.30864 15.3359 7.55556" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  fill="none"/>
+    <path id="j5" d="M13.1128 2C12.372 2.14815 10.9793 2.97778 11.3349 5.11111C11.6905 7.24444 11.1869 7.81482 10.8906 8.11111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  fill="none"/>
+    <path id="j3" d="M18.7591 8.78799C22.9744 7.69436 23.5765 14.2562 17.5547 16.4438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  fill="none"/>
+    <path id="j2" d="M22 19.0699C22 20.6882 17.5228 22 12 22C6.47715 22 2 20.6882 2 19.0699C2 17.9195 3.70729 16.9239 7 16.4444" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path id="j1" d="M6.17481 10.3333C4.96738 10.7408 4.22049 11.304 4.22049 11.9261C4.22049 12.7743 5.60897 13.513 7.6601 13.897M7.6601 13.897C6.89833 14.2824 6.44271 14.7715 6.44271 15.3038C6.44271 16.5474 8.93001 17.5556 11.9983 17.5556C12.7884 17.5556 13.54 17.4887 14.2205 17.3682M7.6601 13.897C8.61629 14.076 9.71648 14.1779 10.8872 14.1779C12.5946 14.1779 14.1521 13.9611 15.3316 13.6045M16.4427 10.1243C15.031 10.5414 13.0635 10.8002 10.8872 10.8002C6.5916 10.8002 3.10938 9.79203 3.10938 8.5484C3.10938 7.5881 5.18563 6.76821 8.10937 6.44446" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  </a>
+  <g id="g4296" class="fore-1" transform="matrix(0.75 0 0 0.75 0 0)">
+    <path d="M5.22576 11.3294L12.224 2.34651C12.7713 1.64397 13.7972 2.08124 13.7972 3.01707V9.96994C13.7972 10.5305 14.1995 10.985 14.6958 10.985H18.0996C18.8729 10.985 19.2851 12.0149 18.7742 12.6706L11.776 21.6535C11.2287 22.356 10.2028 21.9188 10.2028 20.9829V14.0301C10.2028 13.4695 9.80048 13.015 9.3042 13.015H5.90035C5.12711 13.015 4.71494 11.9851 5.22576 11.3294Z" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
   <text xml:space="preserve"
         transform="matrix(0.26458333,0,0,0.26458333,-56.229964,-1.9845869)"
         id="text6970" class="fore-1"
@@ -234,31 +259,6 @@
        x="335.91211"
        y="469.77065"
        id="tspan4320">PANGAIA</tspan></text>
-  <g id="g4296">
-    <g id="g4020">
-      <rect class="fore-1"
-            style="stroke-width:0.149941"
-            id="rect42"
-            width="2.0150471"
-            height="7.0292292"
-            x="10.329948"
-            y="4.2850418"
-            ry="0.56233823" />
-      <path id="path66" class="fore-1"
-            style="color:#000000;stroke-width:0.149941;-inkscape-stroke:none"
-            d="m 13.56277,7.050695 c 1.492207,0.7964053 2.507712,2.3687992 2.507666,4.178368 -1.2e-4,2.613919 -2.11917,4.732844 -4.73309,4.732801 C 8.7235363,15.96175 6.6046563,13.842871 6.6045363,11.229063 6.6045016,9.5017323 7.5298028,7.9905011 8.9117821,7.1640259 9.7956979,6.5640334 10.329508,6.5874567 9.9062535,5.6719488 9.4829989,4.7564409 8.8403304,5.2047669 8.1086736,5.6244497 6.1730871,6.7419743 4.8704963,8.8334111 4.8705663,11.229063 c 1.044e-4,3.571483 2.8953,6.466727 6.4667797,6.466786 3.57159,9.9e-5 6.466981,-2.895192 6.46707,-6.466786 C 17.804479,8.7243737 16.38063,6.5522545 14.298177,5.4780039 13.602852,5.0978041 13.038272,4.8267137 12.706516,5.7284922 12.374759,6.6302707 12.895095,6.6160088 13.56277,7.050695 Z" />
-    </g>
-    <rect style="fill:none;stroke-width:0.275531"
-          id="rect4192"
-          width="12.933888"
-          height="13.410807"
-          x="4.8705277"
-          y="4.2850418" />
-  </g>
-  <path id="path47" class="fore-1"
-        style="stroke-width:0.999999"
-        d="M 107.38086 17.080078 A 24.441996 25.343259 0 0 0 82.939453 42.421875 A 24.441996 25.343259 0 0 0 107.38086 67.765625 A 24.441996 25.343259 0 0 0 127.80859 56.330078 L 122.5293 52.537109 A 17.812162 18.93442 0 0 1 107.40234 61.585938 A 17.812162 18.93442 0 0 1 89.591797 42.652344 A 17.812162 18.93442 0 0 1 107.40234 23.716797 A 17.812162 18.93442 0 0 1 121.2832 30.789062 L 126.37305 26.548828 A 24.441996 25.343259 0 0 0 107.38086 17.080078 z "
-        transform="scale(0.26458333)" />
 </svg>
 </body>
 </html>
